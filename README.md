@@ -1,20 +1,23 @@
-**Introducción**
+# Introducción
 Bienvenid@s mi laboratorio.
 
-Este repositorio se ha creado con la finalidad de recopilar de manera estructurada un conjunto de pruebas de concepto relativas a distintos ámbitos tecnológicos del mundo de la informática.
+Este repositorio se ha creado con la finalidad de recopilar de manera estructurada un conjunto de pruebas de concepto relativas a distintos ámbitos tecnológicos dentro del mundo de la informática.
 
-*Los objetivos principales son:*
+**Los objetivos principales que se persiguen son:**
+- Servir de apoyo al proceso de aprendizaje de los estudiantes.
+- Poner en práctica nuevos conceptos y/o tecnologías del sector.
+- Aprender haciendo.
 
-- Servir de apoyo durante el proceso de aprendizaje de los estudiantes
-- Profundizar en distintas tecnologías mediante 
-Dar visibilidad de pre
-- ...
-- ...
-
-En definitiva... "Serviam ut serviam"
+*"Serviam ut serviam"*
 
 > "Servir para servir"
 
-**Índice por tecnologías**
+# Índice por tecnologías
 
-**Contacto**
+|# Id. | Tecnología                                                 |
+|----- |:---------------------------------------------------------:|
+| 01   |  [DHCP](./02 tecnologías/dhcp)|
+| 02   |  [DNS](./03 tecnologías/dns)|
+| 03   |  [HTTP](./04 tecnologías/http)|
+
+
