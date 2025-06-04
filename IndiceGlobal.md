@@ -1,1 +1,0 @@
-Este sería el índice principal de las PoCs
