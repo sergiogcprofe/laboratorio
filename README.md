@@ -1,5 +1,5 @@
 # Introducción
-Bienvenid@s mi laboratorio.
+**Bienvenid@s mi laboratorio.**
 
 Este repositorio se ha creado con la finalidad de recopilar de manera estructurada un conjunto de pruebas de concepto relativas a distintos ámbitos tecnológicos dentro del mundo de la informática.
 
@@ -16,8 +16,8 @@ Este repositorio se ha creado con la finalidad de recopilar de manera estructura
 
 |# Id. | Tecnología                                                 |
 |----- |:---------------------------------------------------------:|
-| 01   |  [DHCP](./02%20tecnologías/dhcp)|
-| 02   |  [DNS](./03%20tecnologías/dns)|
-| 03   |  [HTTP](./04%20tecnologías/http)|
+| 01   |  [DHCP](./02%20tecnologías/dhcp/README.md)|
+| 02   |  [DNS](./03%20tecnologías/dns/README.md)|
+| 03   |  [HTTP](./04%20tecnologías/http/README.md)|
 
 
