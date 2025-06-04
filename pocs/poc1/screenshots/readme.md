@@ -1,1 +1,0 @@
-Plantilla de poc1
