@@ -1,7 +1,6 @@
 <h1 style="color:#0d47a1;">📘 DHCP en Windows Server</h1>
 
-<p><strong>Fecha de creación:</strong> 04-06-2025</p>
-<p><strong>Última modificación:</strong> 04-06-2025</p>
+<p><strong>Fecha de creación:</strong> 04-06-2025 | <strong>Última modificación:</strong> 04-06-2025</p>
 
 ---
 
@@ -35,45 +34,17 @@
 
 ## ▶️ Pasos
 
-<table style="width:100%; border:1px solid #000000; border-collapse: collapse;">
-  <thead style="background-color:#0d47a1; color:#ffffff;">
-    <tr>
-      <th style="padding:8px; border:1px solid #000000; background-color: #980b0b; color: #ffffff">#</th>
-      <th style="padding:8px; border:1px solid #000000; background-color: #980b0b; color: #ffffff">Paso</th>
-      <th style="padding:8px; border:1px solid #000000; background-color: #980b0b; color: #ffffff">Instrucciones</th>
-      <th style="padding:8px; border:1px solid #000000; background-color: #980b0b; color: #ffffff">Pantallazo</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="padding:8px; border:1px solid #000000;">{{ paso.numero }}</td>
-      <td style="padding:8px; border:1px solid #000000;">{{ paso.paso }}</td>
-      <td style="padding:8px; border:1px solid #000000;">{{ paso.instrucciones }}</td>
-      <td style="padding:8px; border:1px solid #000000;">{{ paso.pantallazo }}</td>
-    </tr>
-  </tbody>
-</table>
+| #  | Paso       | Instrucciones       | Pantallazo    |
+|----|------------|---------------------|---------------|
+| 01 | Instalar   | Abrir el asistente  | ![img](...)   |
 
 ---
 
 ## ✅ Tests
 
-<table style="width:100%; border:1px solid #000000; border-collapse: collapse;">
-  <thead style="background-color:#0d47a1; color:#ffffff;">
-    <tr>
-      <th style="padding:8px; border:1px solid #000000; background-color: #980b0b; color: #ffffff">#</th>
-      <th style="padding:8px; border:1px solid #000000; background-color: #980b0b; color: #ffffff">Descripción</th>
-      <th style="padding:8px; border:1px solid #000000; background-color: #980b0b; color: #ffffff">Resultado esperado</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="padding:8px; border:1px solid #000000;">{{ test.numero }}</td>
-      <td style="padding:8px; border:1px solid #000000;">{{ test.descripción }}</td>
-      <td style="padding:8px; border:1px solid #000000;">{{ test.resultado esperado }}</td>
-    </tr>
-  </tbody>
-</table>
+| #  | Descripción       | Resultado esperado       | Pantallazo    |
+|----|-------------------|--------------------------|---------------|
+| 01 | aaaa   | Abrir el asistente  | ![img](...)   |
 
 ---
 
