@@ -16,8 +16,8 @@ Este repositorio se ha creado con la finalidad de recopilar de manera estructura
 
 |# Id. | Tecnología                                                 |
 |----- |:---------------------------------------------------------:|
-| 01   |  [DHCP](./02 tecnologías/dhcp)|
-| 02   |  [DNS](./03 tecnologías/dns)|
-| 03   |  [HTTP](./04 tecnologías/http)|
+| 01   |  [DHCP](./02%20tecnologías/dhcp)|
+| 02   |  [DNS](./03%20tecnologías/dns)|
+| 03   |  [HTTP](./04%20tecnologías/http)|
 
 
