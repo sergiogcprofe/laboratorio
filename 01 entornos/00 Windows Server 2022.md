@@ -50,7 +50,7 @@
 
 | #  | Descripción       | Resultado esperado       | Pantallazo    |
 |----|-------------------|--------------------------|---------------|
-| 00 | Comprobar configuración de re   | Al abrir una terminal y ejecutar el comando "ipconfig" debe aparecer la configuración de red introducida  | ![img](./assets/00/00_test_instalacion_windows_server_2022.png)   |
+| 00 | Comprobar configuración de red   | Al abrir una terminal y ejecutar el comando "ipconfig" debe aparecer la configuración de red introducida  | ![img](./assets/00/00_tests_instalacion_windows_server_2022.png)   |
 
 ---
 
