@@ -18,5 +18,5 @@ Estos estornos de trabajo se basan en distintas versiones de sistemas operativos
 |# Id. | Entorno                                                 |
 |----- |:---------------------------------------------------------:|
 | 00   |  [Windows Server 2022](./windows/00%20Windows%20Server%202022.md)|
-| 01   |  [Linux Ubuntu Server 24.04](./linux/00%20Linux%20Server%2404.md)|
+| 01   |  [Linux Ubuntu Server 24.04](./linux/00%20Linux%20Server2404.md)|
 | 02   |  [Docker (en Ubuntu Server 24.04)](./contenedores/00%20Docker.md)|
