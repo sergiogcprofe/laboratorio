@@ -38,12 +38,12 @@
 | 01 | Instalar paquetes necesarios para la instalación   | Instalar en el sistema los siguientes paquetes que serán utilizados para realizar la descarga de Docker del repositorio oficial. `sudo apt install -y ca-certificates curl gnupg`  | ![img](./assets/00/01_instalacion_docker.png)   |
 | 02 | Añadir la clave oficial de docker al gestor de paquetes   | Añadir la clave GPG oficial que se descarga con la herramienta "curl" en el gestor de paquetes "apt" . 
 
-```
+<pre>
 sudo install -m 0755 -d /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | \
   sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 sudo chmod a+r /etc/apt/keyrings/docker.gpg 
-```
+</pre>
 
 | ![img](./assets/00/02_instalacion_docker.png)   |
 
