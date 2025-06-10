@@ -56,7 +56,7 @@
 
 | #  | Descripción       | Resultado esperado       | Pantallazo    |
 |----|-------------------|--------------------------|---------------|
-| 00 | Comprobar la conexión  | Desde un terminal del host (Putty, MobaXTerm...), realizar una conexión por SSH en el puerto 2222 con el usuario configurado durante la instalación. La conexión se hará hacia "localhost", ya que la máquina virtual está ejecutándose en el mismo PC. Ejemplo: `ssh -p 2222 calderon@localhost`| ![img](./assets/00/00_tests_instalacion_linux_server_2404.png)   |
+| 00 | Comprobar la conexión  | Desde un terminal del host (Putty, MobaXTerm...), realizar una conexión por SSH en el puerto 2222 con el usuario configurado durante la instalación. La conexión se hará hacia "localhost", ya que la máquina virtual está ejecutándose en el mismo PC. Ejemplo: `ssh -p 2222 calderon@localhost`. El usuario debe ser capaz de acceder al servidor en remoto.| ![img](./assets/00/00_tests_instalacion_linux_server_2404.png)   |
 | 01 | Comprobar la configuración de la red  | Acceder al fichero de configuración de red en el directorio netplan. Ejemplo: `sudo nano /etc/netplan/50-cloud-init.yaml` La configuración debe reflejar los parámetros seleccionados durante la instalación| ![img](./assets/00/01_tests_instalacion_linux_server_2404.png)   |
 | 02 | Comprobar la asignación correcta de configuración de red  | Ejecutar el comando: `ip a` para visualizar la configuración de red, la cual debe reflejar los parámetros seleccionados durante la instalación| ![img](./assets/00/02_tests_instalacion_linux_server_2404.png)   |
 ---
