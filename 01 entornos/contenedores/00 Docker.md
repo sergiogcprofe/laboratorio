@@ -38,25 +38,32 @@
 | 01 | Instalar paquetes necesarios para la instalación   | Instalar en el sistema los siguientes paquetes que serán utilizados para realizar la descarga de Docker del repositorio oficial. `sudo apt install -y ca-certificates curl gnupg`  | ![img](./assets/00/01_instalacion_docker.png)   |
 | 02 | Añadir la clave oficial de docker al gestor de paquetes   | Añadir la clave GPG oficial que se descarga con la herramienta "curl" en el gestor de paquetes "apt" . 
 
-``` sudo install -m 0755 -d /etc/apt/keyrings
+```
+sudo install -m 0755 -d /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | \
   sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-sudo chmod a+r /etc/apt/keyrings/docker.gpg ```  | ![img](./assets/00/02_instalacion_docker.png)   |
+sudo chmod a+r /etc/apt/keyrings/docker.gpg 
+```
+
+| ![img](./assets/00/02_instalacion_docker.png)   |
+
 | 03 | Añadir el repositorio al gestor de paquetes  | Añadir el repositorio oficial de Docker al gestor de paquetes "apt". 
 
-``` echo \
+``` 
+echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] \
   https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | \
-  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null ```   | ![img](./assets/00/03_instalacion_docker.png)   |
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null 
+```
+| ![img](./assets/00/03_instalacion_docker.png)   |
 
 | 04 | Actualizar paquetes e instalar Docker  | Actualizar de nuevo el sistema e instalar Docker con "apt"
 
 ```
 sudo apt update
 sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-
-
-```   | ![img](./assets/00/04_instalacion_docker.png)   |
+```   
+| ![img](./assets/00/04_instalacion_docker.png)   |
 
 | 05 | Dar permisos al usuario  | Incluir al usuario actual dentro del grupo "docker" de manera que no sea necesario realizar "sudo" en cada operación. NO HACER EN ENTORNOS DE PRODUCCIÓN.
 
@@ -81,7 +88,8 @@ Se deberían mostrar las versiones del software instaladas para ambos componente
 
 ## 📚 Referencias / Documentación
 
-- 00 [Cómo instalar Linux Server 24.04 en VirtualBox](https://www.youtube.com/watch?v=CSL0l1FETLw)
+- 00 [How to install Docker on Ubuntu 24.04](https://www.youtube.com/watch?v=9D-HLjJeuFk)
+- 01 [Documentación oficial de Docker](https://docs.docker.com/engine/install/ubuntu/)
 
 
 
