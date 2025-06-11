@@ -48,9 +48,7 @@
 | #  | Descripción       | Resultado esperado       | Pantallazo    |
 |----|-------------------|--------------------------|---------------|
 | 00 | Comprobar la instalación  | Realizar la descarga y ejecución del contenedor de prueba "Hello World". Ejecutar: `sudo docker run hello-world`| ![img](./assets/00/00_tests_instalacion_docker.png)   |
-| 01 | Comprobar las versiones instaladas  | Comprobar las versiones de Docker y Docker Compose instaladas mediante el proceso anterior. Ejecutar los comandos: [Ver código](./code/00/instalacion_docker.md#comprobar-versiones)
-Se deberían mostrar las versiones del software instaladas para ambos componentes.
-| ![img](./assets/00/01_tests_instalacion_docker.png)   |
+| 01 | Comprobar las versiones instaladas  | Comprobar las versiones de Docker y Docker Compose instaladas mediante el proceso anterior. Ejecutar los comandos: [Ver código](./code/00/instalacion_docker.md#comprobar-versiones) Se deberían mostrar las versiones del software instaladas para ambos componentes. | ![img](./assets/00/01_tests_instalacion_docker.png)   |
 
 ---
 
