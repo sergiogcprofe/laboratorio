@@ -39,7 +39,7 @@
 | #  | Paso       | Instrucciones       | Pantallazo    |
 |----|------------|---------------------|---------------|
 | 00 | Abrir el **Server Manager**   | Abrir la herramienta de gestión del servidor y seleccionar la opción de **Add roles and features**   | ![img](./assets/00/00_instalacion_dhcp_windows_server_2022.png)   |
-| 01 | Seleccionar el rol **DHCP Server**   | Continuar en el asistente has poder seleccionar el rol de **DHCP Server**   | ![img](./assets/00/01_instalacion_dhcp_windows_server_2022.png)   |
+| 01 | Seleccionar el rol **DHCP Server**   | Continuar en el asistente hasta poder seleccionar el rol de **DHCP Server**   | ![img](./assets/00/01_instalacion_dhcp_windows_server_2022.png)   |
 | 02 | Confirmar la instalación   | Continuar y confirmar la instalación pulsando en "Intall" para finalizar el asistente   | ![img](./assets/00/02_instalacion_dhcp_windows_server_2022.png)   |
 | 03 | Completar la instalación   | En el icono de la parte superior derecha de la ventana del Server Manager aparecerá un símbolo de advertencia (Triángulo amarillo con admiración). Hacer clic y de nuevo clic en **Complete DHCP configuration**   | ![img](./assets/00/03_instalacion_dhcp_windows_server_2022.png)   |
 | 04 | Comprobar el servicio   | En la pantalla principal del Server Manager, ya debe poder observarse el rol de DHCP en color verde. Además, se puede comprobar que el servicio **DHCP Server** está levantado en la herramienta de servicios   | ![img](./assets/00/04_instalacion_dhcp_windows_server_2022.png)   |
