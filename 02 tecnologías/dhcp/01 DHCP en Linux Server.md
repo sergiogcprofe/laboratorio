@@ -33,9 +33,8 @@
 
 ---
 
-## ▶️ Pasos
+## ▶️ Pasos de instalación
 
-**Instalación**
 
 | #  | Paso       | Instrucciones       | Pantallazo    |
 |----|------------|---------------------|---------------|
@@ -45,13 +44,13 @@
 | 03 | Comprobar razón del fallo en la activación del servicio   | Mediante la búsqueda en los logs del sistema de la palabra "dhcp", se puede comprobar como la razón por la que el servicio no se ha activado es la **falta de configuración del interfaz de red por el que se desea comenzar a proporcionar los parámetros de configuración de red**: `sudo grep dhcp /var/log/syslog`. En el fichero **dhcpd.conf** pueden configurarse las distintas interfaces de red a las que puede estar conectado el servidor, y los parámetros que se servirán a los clientes que se conecten al servicio DHCP por esa interfaz  | ![img](./assets/01/02_instalacion_dhcp_linux_server_24_04.png)   |
 
 
-**Configuración**
+## ▶️ Pasos de configuración
 
 | #  | Paso       | Instrucciones       | Pantallazo    |
 |----|------------|---------------------|---------------|
-| 04 | Configurar una subred | Acceder al fichero de configuración del dhcp mediante un editor de texto (Ejemplo: nano o vim) `sudo nano /etc/dhcp/dhcpd.conf` del menú en la parte superior derecha del Server Manager. A continuación se puede indicar valores de configuración para distintos parámetros de red, siendo los más básicos los que se explican en el siguiente código: [Ver código](./assets/code/00/configuracion_subred.md). La configuración debe realizarse conforme a alguna de las redes definidas en las interfaces de red del sistema operativo.  | ![img](./assets/01/03_instalacion_dhcp_linux_server_24_04.png)   |
-| 05 | Reiniciar el servicio y comprobar activación | Una vez realizados los cambios en la configuración, se reinicia el servicio DHCP mediante el comando: `sudo systemctl restart isc-dhcp-server`. Una vez reiniciado el servicio se comprueba que en esta ocasión sí que se encuentra activo, ya que al menos hay una subred válida configurada: `sudo systemctl status isc-dhcp-server` | ![img](./assets/01/04_instalacion_dhcp_linux_server_24_04.png)   |
-| 06 | Comprobar subred configurada | La salida del comando anterior mostrará como el servicio **dhcpd** está listo para enviar configuración de red a través de la interfaz "enp0s8" (red interna / LAN del servidor). Un poco más abajo se puede ver como muestra la advertencia de que no existe configuración para la subred de escucha en la interfaz "enp0s3" (red esterna / WAN del servidor)  | ![img](./assets/01/05_instalacion_dhcp_linux_server_24_04.png)   |
+| 00 | Configurar una subred | Acceder al fichero de configuración del dhcp mediante un editor de texto (Ejemplo: nano o vim) `sudo nano /etc/dhcp/dhcpd.conf` del menú en la parte superior derecha del Server Manager. A continuación se puede indicar valores de configuración para distintos parámetros de red, siendo los más básicos los que se explican en el siguiente código: [Ver código](./assets/code/00/configuracion_subred.md). La configuración debe realizarse conforme a alguna de las redes definidas en las interfaces de red del sistema operativo.  | ![img](./assets/01/03_instalacion_dhcp_linux_server_24_04.png)   |
+| 01 | Reiniciar el servicio y comprobar activación | Una vez realizados los cambios en la configuración, se reinicia el servicio DHCP mediante el comando: `sudo systemctl restart isc-dhcp-server`. Una vez reiniciado el servicio se comprueba que en esta ocasión sí que se encuentra activo, ya que al menos hay una subred válida configurada: `sudo systemctl status isc-dhcp-server` | ![img](./assets/01/04_instalacion_dhcp_linux_server_24_04.png)   |
+| 02 | Comprobar subred configurada | La salida del comando anterior mostrará como el servicio **dhcpd** está listo para enviar configuración de red a través de la interfaz "enp0s8" (red interna / LAN del servidor). Un poco más abajo se puede ver como muestra la advertencia de que no existe configuración para la subred de escucha en la interfaz "enp0s3" (red esterna / WAN del servidor)  | ![img](./assets/01/05_instalacion_dhcp_linux_server_24_04.png)   |
 ---
 
 ## ✅ Tests
