@@ -1,3 +1,5 @@
+```
+
 # Imagen base
 FROM debian:stable-slim
 
@@ -22,3 +24,5 @@ EXPOSE 67/udp
 
 # Comando de inicio
 CMD ["/usr/sbin/dhcpd", "-f", "-d", "--no-pid", "-cf", "/etc/dhcp/dhcpd.conf"]
+
+```
