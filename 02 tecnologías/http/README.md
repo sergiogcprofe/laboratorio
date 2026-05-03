@@ -15,6 +15,7 @@ HTTP (HyperText Transfer Protocol) es un protocolo de comunicación que permite 
 |# Id. | Prueba de concepto                                                 |
 |----- |:---------------------------------------------------------:|
 | 00   |  [IIS (Internet Information Service) en Windows Server](./00%20IIS%20en%20Windows%20Server.md)|
-| 01   |  [Apache en Ubuntu Server](./00%20Apache%20en%20Linux%20Server.md)|
-| 02   |  [Nginx en Ubuntu Server](./00%20Nginx%20en%20Linux%20Server.md)|
-| 03   |  [Nginx y Apache en Docker. Proxy inverso](./00%20Nginx%20en%20Docker.md)|
+| 01   |  [Apache en Ubuntu Server](./01%20Apache%20en%20Linux%20Server.md)|
+| 02   |  [Nginx en Ubuntu Server](./02%20Nginx%20en%20Linux%20Server.md)|
+| 03   |  [Nginx y Apache en Docker. Proxy inverso](./03%20Proxy%20inverso%20balanceador%20en%20Docker.md)|
+| 04   |  [Nginx y Apache en Docker. Proxy inverso](./04%20Proxy%20inverso%20caché%20en%20Docker.md)|

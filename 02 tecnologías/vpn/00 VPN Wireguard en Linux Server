@@ -1,0 +1,63 @@
+<h1 style="color:#0d47a1;">🛡️ Despliegue de VPN WireGuard (Site-to-Internet)</h1>
+
+<p><strong>Fecha de creación:</strong> 04-06-2025 | <strong>Última modificación:</strong> 08-02-2026</p>
+
+---
+
+## 🎯 Objetivo
+
+<p style="color:#000000;">
+  Implementar una red privada virtual (VPN) utilizando <strong>WireGuard</strong> en Linux Server 24.04. El objetivo es conectar un cliente (Linux Desktop) situado en una red interna aislada para que pueda navegar por Internet de forma segura a través del servidor, utilizando la técnica de <strong>Tunelización y NAT (Masquerading)</strong>.
+</p>
+
+
+
+---
+
+## 🛠️ Tecnologías
+
+- WireGuard, Linux Server 24.04 (Gateway), Linux Desktop (Cliente), VirtualBox.
+
+---
+
+## 📦 Dependencias
+
+- **Virtualización:** Dos máquinas virtuales en VirtualBox.
+- **Servidor:** 2 Adaptadores (1 NAT para Internet + 1 Red Interna `intnet`).
+- **Cliente:** 1 Adaptador (Red Interna `intnet`).
+
+---
+
+## 🖥️ Entorno
+
+- <strong>Servidor (Gateway):</strong> IP Interna: `192.168.10.1`. IP Túnel: `10.8.0.1`.
+- <strong>Cliente (Desktop):</strong> IP Interna: `192.168.10.2`. IP Túnel: `10.8.0.2`.
+
+---
+
+## 📝 Nota Técnica: IP Forwarding y NAT
+
+> **⚠️ Concepto Clave (Examen):**
+> 1. **Forwarding:** Activamos `sysctl` para que el servidor deje pasar paquetes que no son suyos.
+> 2. **NAT (Masquerade):** Usamos `iptables` en la configuración para que el tráfico salga a Internet con la IP del servidor, no con la del túnel. **Sin esto, no hay Internet.**
+
+---
+
+## ▶️ Pasos
+
+| #  | Paso       | Instrucciones       | Pantallazo    |
+|----|------------|---------------------|---------------|
+| 00 | Preparar Escenario de Red | Configurar en VirtualBox las interfaces de red. <br> **Servidor:** `enp0s3` (NAT) y `enp0s8` (Red Interna 192.168.10.1). <br> **Cliente:** `enp0s3` (Red Interna 192.168.10.2). <br> Verificar conectividad local con `ping 192.168.10.1`. | ![img](./assets/vpn/00_red_vbox.png)   |
+| 01 | Instalación de Software | Instalar WireGuard en ambas máquinas. <br> Comando: `sudo apt update && sudo apt install wireguard -y` | ![img](./assets/vpn/01_install.png)   |
+| 02 | Generar Claves (Servidor) | Generar el par de claves privada/pública en el servidor. <br> Comando: `wg genkey \| tee privatekey \| wg pubkey > publickey` <br> **Nota:** Visualizar el contenido con `cat` y copiarlo aparte. | ![img](./assets/vpn/02_keys_server.png)   |
+| 03 | Generar Claves (Cliente) | Repetir el proceso en la máquina cliente. <br> Comando: `wg genkey \| tee privatekey \| wg pubkey > publickey` <br> Guardar las claves generadas. | ![img](./assets/vpn/03_keys_client.png)   |
+| 04 | Configurar Servidor (wg0.conf) | Crear `/etc/wireguard/wg0.conf`. <br> Es vital incluir las líneas `PostUp` y `PostDown` para que funcione el NAT. Añadir al Cliente como [Peer] usando su **Clave Pública**. [Ver configuración Servidor](./code/vpn/server_conf.md) | ![img](./assets/vpn/04_conf_server.png)   |
+| 05 | Activar IP Forwarding | Permitir el enrutamiento en el servidor. <br> Editar `/etc/sysctl.conf`, descomentar `net.ipv4.ip_forward=1` y aplicar con `sudo sysctl -p`. | ![img](./assets/vpn/05_forwarding.png)   |
+| 06 | Configurar Cliente (wg0.conf) | Crear `/etc/wireguard/wg0.conf` en el Cliente. Definir su IP (`10.8.0.2`) y añadir al Servidor como [Peer] usando la **Clave Pública del Servidor**. Importante: Configuración especial de DNS para Ubuntu 24.04. [Ver configuración Cliente](./code/vpn/client_conf.md) | ![img](./assets/vpn/06_conf_client.png)   |
+| 07 | Levantar el Túnel | Iniciar la interfaz VPN en ambas máquinas. <br> Comando: `sudo wg-quick up wg0`. <br> Verificar estado con `sudo wg show`. | ![img](./assets/vpn/07_up.png)   |
+
+---
+
+## ✅ Tests
+
+| #  | Descripción       | Resultado
